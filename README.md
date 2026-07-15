@@ -29,7 +29,7 @@ TastyBites is a modern and responsive restaurant website developed using **ASP.N
 
 ## 📸 Screenshots
 
-*
+
 <img width="902" height="425" alt="Screenshot 2026-07-15 120619" src="https://github.com/user-attachments/assets/36a03da8-af65-40dc-a4aa-ca0fe9b00dd1" />
 <img width="982" height="462" alt="Screenshot 2026-07-15 120240" src="https://github.com/user-attachments/assets/af10866f-ae78-4b95-a17e-b203f56d34fe" />
 <img width="825" height="469" alt="Screenshot 2026-07-15 120439" src="https://github.com/user-attachments/assets/42a23b8a-cf72-480b-b287-22387586ac30" />
@@ -37,7 +37,7 @@ TastyBites is a modern and responsive restaurant website developed using **ASP.N
 <img width="978" height="462" alt="Screenshot 2026-07-15 120358" src="https://github.com/user-attachments/assets/d6e8ddbf-845f-4fa8-ba58-50014054fe63" />
 <img width="977" height="472" alt="Screenshot 2026-07-15 120332" src="https://github.com/user-attachments/assets/25aa85b0-f67a-4a82-b50e-6c1d71204c96" />
 <img width="977" height="525" alt="Screenshot 2026-07-15 120317" src="https://github.com/user-attachments/assets/a3447d51-2114-4fc2-b8db-092a597cd4da" />
-*
+
 
 ## ⚙️ Getting Started
 
