@@ -1,0 +1,215 @@
+﻿@model List<Item>
+@{
+    ViewData["Title"] = "Our Menu";
+}
+
+<!-- Menu Hero Section -->
+<section class="menu-hero">
+    <div class="hero-content">
+        <h1>Our Menu</h1>
+        <p>Discover our exquisite selection of dishes</p>
+    </div>
+</section>
+<br />
+<!-- Menu Categories -->
+<section class="section">
+    <div class="container">
+        <div class="category-filter">
+            <a asp-action="Index" class="@(ViewBag.SelectedCategory == null ? "active" : "")">All Items</a>
+            
+            @foreach (var category in ViewBag.Categories)
+            {
+                <a asp-action="Index" asp-route-category="@category.Name"
+                   class="@(ViewBag.SelectedCategory == category.Name ? "active" : "")">
+                    @category.Name (@category.Items.Count)
+                </a>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- Menu Items -->
+<section class="section menu-section">
+    <div class="container">
+        <div class="menu-items">
+            @foreach (var item in Model)
+            {
+                <div class="menu-card">
+                    <div class="menu-img-container">
+                        @if (!string.IsNullOrEmpty(item.ImageName))
+                        {
+                            <img src="~/Images/@item.ImageName" alt="@item.Name" class="menu-img">
+                        }
+                        else
+                        {
+                            <div class="menu-img-placeholder">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                        }
+                        <div class="menu-overlay">
+                            <a asp-controller="Order" asp-action="Create" class="btn btn-order">Order Now</a>
+                        </div>
+                    </div>
+                    <div class="menu-body">
+                        <h3 class="menu-title">@item.Name</h3>
+                        <div class="menu-category">@item.Category?.Name</div>
+                        <div class="menu-footer">
+                            <span class="menu-price">@item.Price.ToString("C")</span>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+<br />
+<br />
+<style>
+    .menu-hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                    url('/images/background/m1.jpg') center/cover no-repeat;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+    }
+
+    .hero-content h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .category-filter {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+        margin-bottom: 3rem;
+    }
+
+    .category-filter a {
+        padding: 0.5rem 1.5rem;
+        background-color: #f1faee;
+        color: #1d3557;
+        text-decoration: none;
+        border-radius: 30px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .category-filter a:hover, 
+    .category-filter a.active {
+        background-color: #e63946;
+        color: white;
+    }
+
+    .menu-items {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    .menu-card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .menu-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .menu-img-container {
+        position: relative;
+        height: 200px;
+        overflow: hidden;
+    }
+
+    .menu-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    .menu-card:hover .menu-img {
+        transform: scale(1.05);
+    }
+
+    .menu-img-placeholder {
+        width: 100%;
+        height: 100%;
+        background-color: #f1faee;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #a8dadc;
+        font-size: 3rem;
+    }
+
+    .menu-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .menu-card:hover .menu-overlay {
+        opacity: 1;
+    }
+
+    .btn-order {
+        background-color: #e63946;
+        color: white;
+        border: none;
+        padding: 10px 25px;
+        border-radius: 30px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .btn-order:hover {
+        background-color: #c1121f;
+        transform: translateY(-3px);
+    }
+
+    .menu-body {
+        padding: 1.5rem;
+    }
+
+    .menu-title {
+        margin: 0 0 0.5rem 0;
+        color: #1d3557;
+        font-size: 1.2rem;
+    }
+
+    .menu-category {
+        color: #6c757d;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    .menu-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-price {
+        color: #e63946;
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+</style>

@@ -1,0 +1,54 @@
+﻿@model Order
+@{
+    ViewData["Title"] = "Order Confirmation";
+}
+
+<div class="container py-5 text-center">
+    <div class="confirmation-card p-4 shadow rounded bg-white">
+        <i class="fas fa-check-circle text-success mb-3" style="font-size: 5rem;"></i>
+        <h1>Thank You For Your Order!</h1>
+        <p class="lead">Your order has been placed successfully.</p>
+        
+        <div class="order-details mt-5 text-start">
+            <h3>Order Details</h3>
+            <p><strong>Order Number:</strong> #@Model.Id</p>
+            <p><strong>Order Date:</strong> @Model.OrderDate.ToString("f")</p>
+            <p><strong>Status:</strong> <span class="badge bg-info">@Model.Status</span></p>
+            <p><strong>Total Amount:</strong> @Model.TotalAmount.ToString("C")</p>
+            
+            <h4 class="mt-4">Order Items</h4>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.OrderItems)
+                    {
+                        <tr>
+                            <td>@item.Item.Name</td>
+                            <td>@item.Quantity</td>
+                            <td>@item.UnitPrice.ToString("C")</td>
+                            <td>@((item.Quantity * item.UnitPrice).ToString("C"))</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="mt-4">
+            <a href="/Home/Index" class="btn btn-primary">Back to Home</a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .confirmation-card {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+</style>

@@ -1,0 +1,67 @@
+﻿@model Item
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Manage Categories";
+}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="card border-0 shadow">
+                <div class="card-header bg-primary bg-gradient text-white py-3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h3 class="mb-0"><i class="fas fa-info-circle me-2"></i>Item Details</h3>
+                    </div>
+                </div>
+                <div class="card-body p-4">
+                    <div class="row align-items-center g-4">
+                        <div class="col-md-5 text-center">
+                            <div class="p-3 bg-light rounded-3 shadow-sm">
+                                <img src="~/Images/@Model.ImageName" alt="@Model.Name" 
+                                     class="img-fluid rounded" style="max-height: 250px;">
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="p-3">
+                                <h4 class="text-primary mb-4">@Model.Name</h4>
+                                
+                                <div class="mb-4">
+                                    <h5 class="border-bottom pb-2 mb-3">Item Information</h5>
+                                    <div class="row g-3">
+                                        <div class="col-6">
+                                            <div class="p-3 bg-light rounded-3">
+                                                <small class="text-muted d-block">Price</small>
+                                                <strong>@Model.Price.ToString("C2")</strong>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="p-3 bg-light rounded-3">
+                                                <small class="text-muted d-block">Category</small>
+                                                <strong>@Model.Category?.Name</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between mt-5">
+                        <a asp-controller="Items" asp-action="Index" class="btn btn-outline-secondary px-4">
+                            <i class="fas fa-arrow-left me-2"></i>Back to Items
+                        </a>
+                        <div class="btn-group">
+                            <a asp-controller="Items" asp-action="Edit" asp-route-id="@Model.Id" 
+                               class="btn btn-primary px-4">
+                                <i class="fas fa-edit me-2"></i>Edit
+                            </a>
+                            <a asp-controller="Items" asp-action="Delete" asp-route-id="@Model.Id" 
+                               class="btn btn-outline-danger px-4">
+                                <i class="fas fa-trash-alt me-2"></i>Delete
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

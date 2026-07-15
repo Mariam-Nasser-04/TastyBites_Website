@@ -1,0 +1,142 @@
+﻿@model List<Item>
+@{
+    ViewData["Title"] = "Place Order";
+}
+
+<div class="container py-5">
+    <h1 class="text-center mb-4">Place Your Order</h1>
+    
+    <form asp-action="Create" method="post">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Customer Information</h3>
+                <div class="form-group mb-3">
+                    <label for="CustomerName">Full Name</label>
+                    <input type="text" class="form-control" name="CustomerName" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="PhoneNumber">Phone Number</label>
+                    <input type="tel" class="form-control" name="PhoneNumber" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="Email">Email (Optional)</label>
+                    <input type="email" class="form-control" name="Email">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="Address">Delivery Address</label>
+                    <textarea class="form-control" name="Address" rows="3"></textarea>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <h3>Menu Items</h3>
+                <div class="menu-items">
+                    @foreach (var item in Model)
+                    {
+                        <div class="card mb-3">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    @if (!string.IsNullOrEmpty(item.ImageName))
+                                    {
+                                        <img src="~/Images/@item.ImageName" class="img-fluid rounded-start" alt="@item.Name">
+                                    }
+                                    else
+                                    {
+                                        <div class="no-image-placeholder">
+                                            <i class="fas fa-utensils"></i>
+                                        </div>
+                                    }
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">@item.Name</h5>
+                                        <p class="card-text text-muted">@item.Category?.Name</p>
+                                        <p class="card-text"><strong>@item.Price.ToString("C")</strong></p>
+                                        <div class="quantity-selector">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary decrement">-</button>
+                                            <input type="number" name="quantities" value="0" min="0" class="quantity-input" 
+                                                   data-item-id="@item.Id" data-price="@item.Price">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary increment">+</button>
+                                            <input type="hidden" name="itemIds" value="@item.Id">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h4>Total: <span id="totalAmount">$0.00</span></h4>
+                    <button type="submit" class="btn btn-primary btn-lg">Place Order</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            // Handle quantity changes
+            $('.increment').click(function() {
+                const input = $(this).siblings('.quantity-input');
+                input.val(parseInt(input.val()) + 1);
+                updateTotal();
+            });
+            
+            $('.decrement').click(function() {
+                const input = $(this).siblings('.quantity-input');
+                const newVal = parseInt(input.val()) - 1;
+                input.val(newVal >= 0 ? newVal : 0);
+                updateTotal();
+            });
+            
+            $('.quantity-input').change(function() {
+                if (parseInt($(this).val()) < 0) {
+                    $(this).val(0);
+                }
+                updateTotal();
+            });
+            
+            // Calculate total amount
+            function updateTotal() {
+                let total = 0;
+                $('.quantity-input').each(function() {
+                    const quantity = parseInt($(this).val());
+                    const price = parseFloat($(this).data('price'));
+                    total += quantity * price;
+                });
+                $('#totalAmount').text('$' + total.toFixed(2));
+            }
+        });
+    </script>
+}
+
+<style>
+    .no-image-placeholder {
+        width: 100%;
+        height: 100%;
+        background-color: #f8f9fa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #6c757d;
+        font-size: 2rem;
+    }
+    
+    .quantity-selector {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    .quantity-input {
+        width: 50px;
+        text-align: center;
+    }
+</style>

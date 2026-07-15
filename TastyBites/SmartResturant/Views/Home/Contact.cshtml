@@ -1,0 +1,384 @@
+﻿@{
+    ViewData["Title"] = "Contact Gourmet Haven";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        :root {
+            --primary: #e63946;
+            --secondary: #f1faee;
+            --dark: #1d3557;
+            --light: #a8dadc;
+            --accent: #457b9d;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        
+        .contact-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('/images/background/c1.jpg') center/cover no-repeat;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .contact-hero-content {
+            max-width: 800px;
+            padding: 2rem;
+        }
+        
+        .contact-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .section {
+            padding: 5rem 0;
+        }
+        
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        
+        .contact-info {
+            background-color: var(--secondary);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+        
+        .contact-info h3 {
+            color: var(--dark);
+            margin-top: 0;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        
+        .info-icon {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-right: 1rem;
+            margin-top: 5px;
+        }
+        
+        .info-text h4 {
+            margin: 0 0 5px 0;
+            color: var(--dark);
+        }
+        
+        .info-text p {
+            margin: 0;
+            color: #555;
+        }
+        
+        .contact-form {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: var(--dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .map-container {
+            height: 400px;
+            margin-top: 3rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* Opening Hours Section */
+        .hours-section {
+            background-color: var(--secondary);
+            padding: 3rem 0;
+            margin-top: 3rem;
+        }
+        
+        .hours-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .hours-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .hours-card h3 {
+            color: var(--dark);
+            margin-top: 0;
+        }
+        
+        .hours-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .hours-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .hours-list .day {
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .hours-list .time {
+            color: var(--accent);
+        }
+        
+        /* Footer (same as home view) */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .social-icons {
+            margin: 1rem 0;
+        }
+        
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: var(--light);
+        }
+    </style>
+</head>
+<body>
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="contact-hero-content">
+            <h1>Get In Touch</h1>
+            <p>We'd love to hear from you - reservations, questions, or feedback</p>
+        </div>
+    </section>
+
+    <!-- Contact Content Section -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Address</h4>
+                            <p>123 Culinary Street, Foodville, FV 12345</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Email</h4>
+                            <p>info@gourmethaven.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Customer Service</h4>
+                            <p>service@gourmethaven.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Reservations</h4>
+                            <p>reservations@gourmethaven.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            @* <!-- Map Section -->
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215662132365!2d-73.98784492453507!3d40.74844047138988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1623251234567!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+            </div> *@
+        </div>
+    </section>
+
+    <!-- Opening Hours Section -->
+    <section class="hours-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Opening Hours</h2>
+            </div>
+            <div class="hours-container">
+                <div class="hours-card">
+                    <h3>Dining Hours</h3>
+                    <ul class="hours-list">
+                        <li><span class="day">Monday - Thursday</span> <span class="time">11:00 AM - 9:00 PM</span></li>
+                        <li><span class="day">Friday - Saturday</span> <span class="time">11:00 AM - 10:30 PM</span></li>
+                        <li><span class="day">Sunday</span> <span class="time">10:00 AM - 8:00 PM</span></li>
+                    </ul>
+                </div>
+                <div class="hours-card">
+                    <h3>Brunch Hours</h3>
+                    <ul class="hours-list">
+                        <li><span class="day">Saturday</span> <span class="time">10:00 AM - 3:00 PM</span></li>
+                        <li><span class="day">Sunday</span> <span class="time">10:00 AM - 3:00 PM</span></li>
+                    </ul>
+                </div>
+                <div class="hours-card">
+                    <h3>Happy Hour</h3>
+                    <ul class="hours-list">
+                        <li><span class="day">Monday - Friday</span> <span class="time">4:00 PM - 6:00 PM</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as home view) -->
+    <footer>
+        <div class="container">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+            <p>&copy; @DateTime.Now.Year Gourmet Haven. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

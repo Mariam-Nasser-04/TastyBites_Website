@@ -1,0 +1,128 @@
+﻿@model SmartResturant.Models.Customer
+@{
+    ViewData["Title"] = "Register";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4e73df;
+            --secondary-color: #f8f9fc;
+        }
+        
+        body {
+            background-color: var(--secondary-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .auth-container {
+            max-width: 500px;
+            margin: 3rem auto;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            background: white;
+        }
+        
+        .auth-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+        }
+        
+        .btn-success {
+            background-color: #1cc88a;
+            border: none;
+            width: 100%;
+            padding: 10px;
+            font-weight: 600;
+        }
+        
+        .btn-success:hover {
+            background-color: #17a673;
+        }
+        
+        .form-control {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.25rem rgba(78, 115, 223, 0.25);
+        }
+        
+        .auth-footer {
+            text-align: center;
+            margin-top: 1.5rem;
+            color: #6c757d;
+        }
+        
+        .auth-footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .auth-footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .error-message {
+            text-align: center;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-header">
+            <h2>Create an Account</h2>
+            <p class="text-muted">Fill in your details to get started</p>
+        </div>
+        
+        <form method="post">
+            <div class="mb-3">
+                <label class="form-label">Full Name</label>
+                <input type="text" name="Name" class="form-control" required placeholder="Enter your full name" />
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">Phone Number</label>
+                <input type="text" name="Phone" class="form-control" required placeholder="Enter your phone number" />
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" name="Email" class="form-control" required placeholder="Enter your email" />
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">Password</label>
+                <input type="password" name="Password" class="form-control" required placeholder="Create a password" />
+            </div>
+            
+            <button type="submit" class="btn btn-success mt-3">Register</button>
+            
+            @if (ViewBag.Error != null)
+            {
+                <p class="text-danger error-message mt-3">@ViewBag.Error</p>
+            }
+        </form>
+        
+        <div class="auth-footer">
+            <p>Already have an account? <a href="/Account/Login">Login here</a></p>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,260 @@
+﻿@model List<SmartResturant.Models.Order>
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="admin-dashboard">
+    <div class="dashboard-header">
+        <h1 class="welcome-title">Welcome Back, Admin!</h1>
+        <p class="welcome-message">Here's what's happening with your restaurant today.</p>
+    </div>
+
+    <div class="dashboard-stats">
+        <div class="stat-card bg-primary">
+            <div class="stat-icon">
+                <i class="fas fa-utensils"></i>
+            </div>
+            <div class="stat-content">
+                <h3>@ViewBag.ItemsCount</h3>
+                <p>Menu Items</p>
+            </div>
+        </div>
+
+        <div class="stat-card bg-success">
+            <div class="stat-icon">
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+            <div class="stat-content">
+                <h3>@ViewBag.TotalOrders</h3>
+                <p>All Orders</p>
+            </div>
+        </div>
+
+        <div class="stat-card bg-warning">
+            <div class="stat-icon">
+                <i class="fas fa-users"></i>
+            </div>
+            <div class="stat-content">
+                <h3>@ViewBag.CustomersCount</h3>
+                <p>New Customers</p>
+            </div>
+        </div>
+
+        <div class="stat-card bg-danger">
+            <div class="stat-icon">
+                <i class="fas fa-dollar-sign"></i>
+            </div>
+            <div class="stat-content">
+                <h3>$@ViewBag.TotalRevenue</h3>
+                <p>Total Revenue</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="dashboard-actions">
+        <a asp-controller="Items" asp-action="Index" class="action-btn">
+            <i class="fas fa-list-alt"></i>
+            <span>Manage Items</span>
+        </a>
+
+        <a asp-controller="Category" asp-action="Index" class="action-btn">
+            <i class="fas fa-list-alt"></i>
+            <span>Manage Categories</span>
+        </a>
+
+        <a asp-controller="Order" asp-action="Manage" class="action-btn">
+            <i class="fas fa-receipt"></i>
+            <span>View Orders</span>
+        </a>
+    </div>
+
+<div class="recent-orders">
+    <h3><i class="fas fa-clock"></i> Recent Orders</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Order #</th>
+                <th>Customer</th>
+                <th>Time</th>
+                <th>Amount</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in Model)
+            {
+                <tr>
+                    <td>#@order.Id</td>
+                    <td>@order.CustomerName</td>
+                    <td>@order.OrderDate.ToString("hh:mm tt")</td>
+                    <td>$@order.TotalAmount</td>
+                    <td>
+                        <span class="badge bg-@GetStatusColor(order.Status)">
+                            @order.Status
+                        </span>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<br />
+<br />
+
+<style>
+    .admin-dashboard {
+        padding: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .dashboard-header {
+        margin-bottom: 30px;
+    }
+
+    .welcome-title {
+        color: #2c3e50;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .welcome-message {
+        color: #7f8c8d;
+        font-size: 1.1em;
+    }
+
+    .dashboard-stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    .stat-card {
+        border-radius: 10px;
+        padding: 20px;
+        color: white;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .stat-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .stat-icon {
+        font-size: 2.5em;
+        margin-right: 15px;
+    }
+
+    .stat-content h3 {
+        font-size: 1.8em;
+        margin: 0;
+    }
+
+    .stat-content p {
+        margin: 5px 0 0;
+        opacity: 0.9;
+    }
+
+    .bg-primary { background: linear-gradient(135deg, #3498db, #2c3e50); }
+    .bg-success { background: linear-gradient(135deg, #2ecc71, #27ae60); }
+    .bg-warning { background: linear-gradient(135deg, #f39c12, #d35400); }
+    .bg-danger { background: linear-gradient(135deg, #e74c3c, #c0392b); }
+
+    .dashboard-actions {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+
+    .action-btn {
+        background: #f8f9fa;
+        border-radius: 8px;
+        padding: 20px 15px;
+        text-align: center;
+        color: #34495e;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .action-btn:hover {
+        background: #e9ecef;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        color: #2c3e50;
+    }
+
+    .action-btn i {
+        font-size: 2em;
+        margin-bottom: 10px;
+        color: #3498db;
+    }
+
+    .recent-orders {
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .recent-orders h3 {
+        color: #2c3e50;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    .recent-orders h3 i {
+        margin-right: 10px;
+        color: #3498db;
+    }
+
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .table th, .table td {
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid #e9ecef;
+    }
+
+    .table th {
+        background-color: #f8f9fa;
+        color: #495057;
+        font-weight: 600;
+    }
+
+    .badge {
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 0.8em;
+        font-weight: 600;
+    }
+</style>
+
+@functions {
+    public string GetStatusColor(SmartResturant.Models.OrderStatus status)
+    {
+        return status switch
+        {
+            SmartResturant.Models.OrderStatus.Delivered => "success",
+            SmartResturant.Models.OrderStatus.Preparing => "warning",
+            SmartResturant.Models.OrderStatus.Cancelled => "danger",
+            SmartResturant.Models.OrderStatus.Ready => "info",
+            SmartResturant.Models.OrderStatus.Pending => "secondary",
+            SmartResturant.Models.OrderStatus.Confirmed => "primary",
+            _ => "dark"
+        };
+    }
+}
+

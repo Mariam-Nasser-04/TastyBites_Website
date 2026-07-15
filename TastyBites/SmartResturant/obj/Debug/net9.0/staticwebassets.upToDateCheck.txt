@@ -1,0 +1,159 @@
+wwwroot\css\site.css
+wwwroot\favicon.ico
+wwwroot\Images\16ec12fa-5390-4c2e-b888-fc4823e75db7.png
+wwwroot\Images\1710236c-7612-4531-85bc-58034caadbf8.png
+wwwroot\Images\1fe1926c-0da8-4646-a139-c7bc47d92726.png
+wwwroot\Images\27113f0b-ba2a-4d2d-9710-70e369f18362.png
+wwwroot\Images\3343d19e-7a9f-4543-bae9-4efbe709c8dd.png
+wwwroot\Images\43646046-69b8-44e7-ad08-7c8ca65d5d80.png
+wwwroot\Images\544d3fc1-da10-4964-b892-0b68a9bc19c4.png
+wwwroot\Images\66d9c806-405e-41d2-ae6f-c0a125a2ab15.png
+wwwroot\Images\6b7ac354-9406-48be-88c2-4f95707be834.png
+wwwroot\Images\8a167283-d8d8-4884-8e46-e4323b32baae.png
+wwwroot\Images\8fae0000-c941-47af-96c0-4dec38b9808b.png
+wwwroot\Images\a3e0b605-1cfb-4bd9-b322-161ccf4f8835.png
+wwwroot\Images\a6624698-6c31-40de-a01e-022774d4767d.png
+wwwroot\Images\background\bg1.jpg
+wwwroot\Images\background\bg2.jpg
+wwwroot\Images\background\bg3.jpg
+wwwroot\Images\background\c1.jpg
+wwwroot\Images\background\m1.jpg
+wwwroot\Images\background\s1.jpg
+wwwroot\Images\c145c1f3-0e86-42af-a84a-14fe8d66471c.png
+wwwroot\Images\cf6b4792-29db-434d-9a86-6176e7c5192c.png
+wwwroot\Images\d69e5a96-5765-44a4-80c1-f44a600c1153.png
+wwwroot\Images\d7bb45f8-d09a-4ee7-8880-1e464143ccf8.png
+wwwroot\Images\e04a1cf0-39c0-46ad-90d3-301dc0008943.png
+wwwroot\Images\f4904167-9889-416c-a2a7-71ebebbd425f.png
+wwwroot\Images\special\s1.jpg
+wwwroot\Images\special\s2.jpg
+wwwroot\Images\special\s3.jpg
+wwwroot\Images\Team\pic1.jpg
+wwwroot\Images\Team\pic2.jpg
+wwwroot\Images\Team\pic3.jpg
+wwwroot\Images\testimonials\user1.jpg
+wwwroot\Images\testimonials\user2.jpg
+wwwroot\Images\testimonials\user3.jpg
+wwwroot\js\site.js
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+wwwroot\lib\bootstrap\LICENSE
+wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.js
+wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.min.js
+wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+wwwroot\lib\jquery-validation\dist\additional-methods.js
+wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+wwwroot\lib\jquery-validation\dist\jquery.validate.js
+wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+wwwroot\lib\jquery-validation\LICENSE.md
+wwwroot\lib\jquery\dist\jquery.js
+wwwroot\lib\jquery\dist\jquery.min.js
+wwwroot\lib\jquery\dist\jquery.min.map
+wwwroot\lib\jquery\dist\jquery.slim.js
+wwwroot\lib\jquery\dist\jquery.slim.min.js
+wwwroot\lib\jquery\dist\jquery.slim.min.map
+wwwroot\lib\jquery\LICENSE.txt
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\jquery\LICENSE.txt
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\jquery\dist\jquery.slim.min.map
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\jquery\dist\jquery.slim.min.js
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\jquery\dist\jquery.slim.js
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\jquery\dist\jquery.min.map
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\jquery\dist\jquery.min.js
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\jquery\dist\jquery.js
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\jquery-validation\LICENSE.md
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\jquery-validation\dist\jquery.validate.js
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\jquery-validation\dist\additional-methods.js
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.min.js
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.js
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\js\bootstrap.js
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\css\bootstrap.css
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\js\site.js
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\css\site.css
+C:\Users\MariamNasser\Desktop\.NET Project\TastyBites\TastyBites\SmartResturant\wwwroot\favicon.ico

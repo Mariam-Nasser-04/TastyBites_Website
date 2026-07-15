@@ -1,0 +1,64 @@
+﻿@model Category
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Manage Categories";
+}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card border-0 shadow-lg">
+                <div class="card-header bg-gradient-danger text-black py-3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h3 class="mb-0"><i class="fas fa-trash-alt me-2"></i>Delete Confirmation</h3>
+                        <span class="badge bg-red text-danger fs-6">Danger Zone</span>
+                    </div>
+                </div>
+                <div class="card-body p-4">
+                    <div class="alert alert-danger border-danger border-2">
+                        <div class="d-flex">
+                            <i class="fas fa-exclamation-circle fa-2x me-3 mt-1"></i>
+                            <div>
+                                <h4 class="alert-heading">Warning!</h4>
+                                <p class="mb-0">You are about to permanently delete this category. This action cannot be undone.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="p-3 bg-light rounded-3 h-100">
+                                <h5 class="text-muted mb-3">Category Details</h5>
+                                <dl class="row mb-0">
+                                    <dt class="col-sm-4 text-end">Name:</dt>
+                                    <dd class="col-sm-8">@Html.DisplayFor(cat => cat.Name)</dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-3 bg-light rounded-3 h-100 d-flex flex-column">
+                                <h5 class="text-muted mb-3">Current Image</h5>
+                                <div class="text-center mt-auto">
+                                    <img src="~/Images/@Model.ImageName" alt="@Model.Name" 
+                                         class="img-fluid rounded shadow" style="max-height: 180px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between mt-5">
+                        <form method="post" asp-controller="Category" asp-action="DeleteCurrent">
+                            <input type="hidden" asp-for="Id" />
+                            <button type="submit" class="btn btn-danger btn-lg px-4 py-2">
+                                <i class="fas fa-trash-alt me-2"></i>Permanently Delete
+                            </button>
+                        </form>
+
+                        <a asp-controller="Category" asp-action="Index" class="btn btn-outline-secondary btn-lg px-4 py-2">
+                            <i class="fas fa-times me-2"></i>Cancel
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

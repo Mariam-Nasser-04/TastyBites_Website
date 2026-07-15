@@ -1,0 +1,364 @@
+﻿@{
+    ViewData["Title"] = "About Gourmet Haven";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        :root {
+            --primary: #e63946;
+            --secondary: #f1faee;
+            --dark: #1d3557;
+            --light: #a8dadc;
+            --accent: #457b9d;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        
+        .about-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('/images/background/s1.jpg') center/cover no-repeat;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .about-hero-content {
+            max-width: 800px;
+            padding: 2rem;
+        }
+        
+        .about-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .section {
+            padding: 5rem 0;
+        }
+        
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .about-img {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .about-text p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: var(--dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .team-section {
+            background-color: var(--secondary);
+        }
+        
+        .team-members {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .team-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .team-img {
+            height: 450px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+        }
+        
+        .team-content {
+            padding: 1.5rem;
+        }
+        
+        .team-content h3 {
+            margin-top: 0;
+            color: var(--dark);
+        }
+        
+        .team-content p {
+            color: var(--accent);
+            font-weight: 500;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            color: var(--dark);
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--primary);
+        }
+        
+        .values {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        
+        .value-card {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .value-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .value-card h3 {
+            color: var(--dark);
+        }
+        
+        /* Footer styles from home view */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .social-icons {
+            margin: 1rem 0;
+        }
+        
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: var(--light);
+        }
+    </style>
+</head>
+<body>
+    <!-- About Hero Section -->
+    <section class="about-hero">
+        <div class="about-hero-content">
+            <h1>Our Story</h1>
+            <p>Discover the passion and tradition behind Gourmet Haven</p>
+        </div>
+    </section>
+
+    <!-- About Content Section -->
+    <section class="section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="/images/background/bg1.jpg" alt="Gourmet Haven Restaurant">
+                </div>
+                <div class="about-text">
+                    <h2>Welcome to Gourmet Haven</h2>
+                    <p>Founded in 2010, Gourmet Haven began as a small family-owned bistro with a simple mission: to create extraordinary dining experiences using the finest ingredients and time-honored techniques.</p>
+                    <p>What started as a humble 10-table restaurant has blossomed into one of the city's most celebrated dining destinations, earning multiple awards and accolades along the way.</p>
+                    <p>Our philosophy centers on the belief that exceptional food should be accessible to everyone. We meticulously source seasonal ingredients from local farmers and producers, ensuring each dish tells a story of quality and craftsmanship.</p>
+                    <a asp-controller="Home" asp-action="Contact" class="btn">Visit Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Core Values</h2>
+            </div>
+            <div class="values">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Sustainability</h3>
+                    <p>We're committed to environmentally responsible practices, from sourcing to waste reduction.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Passion</h3>
+                    <p>Every dish is prepared with love and dedication to culinary excellence.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Community</h3>
+                    <p>We support local producers and give back to the community that supports us.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+<section class="section team-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Meet Our Culinary Team</h2>
+        </div>
+        <div class="team-members">
+            <!-- Chef 1 -->
+            <div class="team-card">
+                <div class="team-img">
+                    <img src="/images/Team/pic1.jpg" alt="Chef Michael Laurent">
+                </div>
+                <div class="team-content">
+                    <h3>Chef Michael Laurent</h3>
+                    <p>Executive Chef</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chef 2 -->
+            <div class="team-card">
+                <div class="team-img">
+                    <img src="/images/Team/pic2.jpg" alt="Updreamia Chen">
+                </div>
+                <div class="team-content">
+                    <h3>Updreamia Chen</h3>
+                    <p>Hostery Chef</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chef 3 -->
+            <div class="team-card">
+                <div class="team-img">
+                    <img src="/images/Team/pic3.jpg" alt="Chef Antony Rodriguez">
+                </div>
+                <div class="team-content">
+                    <h3>Chef Antony Rodriguez</h3>
+                    <p>Sous Chef</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer (same as home view) -->
+    <footer>
+        <div class="container">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+            <p>&copy; @DateTime.Now.Year Gourmet Haven. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

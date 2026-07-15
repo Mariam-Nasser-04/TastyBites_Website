@@ -1,0 +1,195 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\MariamNasser\\Desktop\\.NET Project\\TastyBites\\TastyBites\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{56844A05-2594-49FF-A2B0-76D4FE8A8CFA}|SmartResturant\\SmartResturant.csproj|c:\\users\\mariamnasser\\desktop\\.net project\\tastybites\\tastybites\\smartresturant\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{56844A05-2594-49FF-A2B0-76D4FE8A8CFA}|SmartResturant\\SmartResturant.csproj|solutionrelative:smartresturant\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56844A05-2594-49FF-A2B0-76D4FE8A8CFA}|SmartResturant\\SmartResturant.csproj|c:\\users\\mariamnasser\\desktop\\.net project\\tastybites\\tastybites\\smartresturant\\views\\order\\manage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{56844A05-2594-49FF-A2B0-76D4FE8A8CFA}|SmartResturant\\SmartResturant.csproj|solutionrelative:smartresturant\\views\\order\\manage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56844A05-2594-49FF-A2B0-76D4FE8A8CFA}|SmartResturant\\SmartResturant.csproj|c:\\users\\mariamnasser\\desktop\\.net project\\tastybites\\tastybites\\smartresturant\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{56844A05-2594-49FF-A2B0-76D4FE8A8CFA}|SmartResturant\\SmartResturant.csproj|solutionrelative:smartresturant\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56844A05-2594-49FF-A2B0-76D4FE8A8CFA}|SmartResturant\\SmartResturant.csproj|c:\\users\\mariamnasser\\desktop\\.net project\\tastybites\\tastybites\\smartresturant\\views\\items\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{56844A05-2594-49FF-A2B0-76D4FE8A8CFA}|SmartResturant\\SmartResturant.csproj|solutionrelative:smartresturant\\views\\items\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56844A05-2594-49FF-A2B0-76D4FE8A8CFA}|SmartResturant\\SmartResturant.csproj|c:\\users\\mariamnasser\\desktop\\.net project\\tastybites\\tastybites\\smartresturant\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56844A05-2594-49FF-A2B0-76D4FE8A8CFA}|SmartResturant\\SmartResturant.csproj|solutionrelative:smartresturant\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56844A05-2594-49FF-A2B0-76D4FE8A8CFA}|SmartResturant\\SmartResturant.csproj|c:\\users\\mariamnasser\\desktop\\.net project\\tastybites\\tastybites\\smartresturant\\views\\order\\confirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{56844A05-2594-49FF-A2B0-76D4FE8A8CFA}|SmartResturant\\SmartResturant.csproj|solutionrelative:smartresturant\\views\\order\\confirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56844A05-2594-49FF-A2B0-76D4FE8A8CFA}|SmartResturant\\SmartResturant.csproj|c:\\users\\mariamnasser\\desktop\\.net project\\tastybites\\tastybites\\smartresturant\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56844A05-2594-49FF-A2B0-76D4FE8A8CFA}|SmartResturant\\SmartResturant.csproj|solutionrelative:smartresturant\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56844A05-2594-49FF-A2B0-76D4FE8A8CFA}|SmartResturant\\SmartResturant.csproj|c:\\users\\mariamnasser\\desktop\\.net project\\tastybites\\tastybites\\smartresturant\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{56844A05-2594-49FF-A2B0-76D4FE8A8CFA}|SmartResturant\\SmartResturant.csproj|solutionrelative:smartresturant\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:11:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:12:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{809f6ff3-8092-454a-8003-6d4091f9b5bb}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\MariamNasser\\Desktop\\.NET Project\\TastyBites\\TastyBites\\SmartResturant\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "SmartResturant\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\MariamNasser\\Desktop\\.NET Project\\TastyBites\\TastyBites\\SmartResturant\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "SmartResturant\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAPcAAAAAaGZmZmYkwP4AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-14T11:13:16.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Manage.cshtml",
+              "DocumentMoniker": "C:\\Users\\MariamNasser\\Desktop\\.NET Project\\TastyBites\\TastyBites\\SmartResturant\\Views\\Order\\Manage.cshtml",
+              "RelativeDocumentMoniker": "SmartResturant\\Views\\Order\\Manage.cshtml",
+              "ToolTip": "C:\\Users\\MariamNasser\\Desktop\\.NET Project\\TastyBites\\TastyBites\\SmartResturant\\Views\\Order\\Manage.cshtml",
+              "RelativeToolTip": "SmartResturant\\Views\\Order\\Manage.cshtml",
+              "ViewState": "AgIAABwAAAAAMzMzMzMLwCoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-30T12:32:33.507Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\MariamNasser\\Desktop\\.NET Project\\TastyBites\\TastyBites\\SmartResturant\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "SmartResturant\\Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "C:\\Users\\MariamNasser\\Desktop\\.NET Project\\TastyBites\\TastyBites\\SmartResturant\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeToolTip": "SmartResturant\\Views\\Shared\\_AdminLayout.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAuwE8AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-30T12:27:02.722Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\MariamNasser\\Desktop\\.NET Project\\TastyBites\\TastyBites\\SmartResturant\\Views\\Items\\Index.cshtml",
+              "RelativeDocumentMoniker": "SmartResturant\\Views\\Items\\Index.cshtml",
+              "ToolTip": "C:\\Users\\MariamNasser\\Desktop\\.NET Project\\TastyBites\\TastyBites\\SmartResturant\\Views\\Items\\Index.cshtml",
+              "RelativeToolTip": "SmartResturant\\Views\\Items\\Index.cshtml",
+              "ViewState": "AgIAAJ0AAAAAAAAAAAAuwKYAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-30T12:13:44.544Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ItemsController.cs",
+              "DocumentMoniker": "C:\\Users\\MariamNasser\\Desktop\\.NET Project\\TastyBites\\TastyBites\\SmartResturant\\Controllers\\ItemsController.cs",
+              "RelativeDocumentMoniker": "SmartResturant\\Controllers\\ItemsController.cs",
+              "ToolTip": "C:\\Users\\MariamNasser\\Desktop\\.NET Project\\TastyBites\\TastyBites\\SmartResturant\\Controllers\\ItemsController.cs",
+              "RelativeToolTip": "SmartResturant\\Controllers\\ItemsController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T12:08:20.832Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Confirmation.cshtml",
+              "DocumentMoniker": "C:\\Users\\MariamNasser\\Desktop\\.NET Project\\TastyBites\\TastyBites\\SmartResturant\\Views\\Order\\Confirmation.cshtml",
+              "RelativeDocumentMoniker": "SmartResturant\\Views\\Order\\Confirmation.cshtml",
+              "ToolTip": "C:\\Users\\MariamNasser\\Desktop\\.NET Project\\TastyBites\\TastyBites\\SmartResturant\\Views\\Order\\Confirmation.cshtml",
+              "RelativeToolTip": "SmartResturant\\Views\\Order\\Confirmation.cshtml",
+              "ViewState": "AgIAABQAAABAMzMzMzMbwCsAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-30T11:56:29.04Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\MariamNasser\\Desktop\\.NET Project\\TastyBites\\TastyBites\\SmartResturant\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "SmartResturant\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\MariamNasser\\Desktop\\.NET Project\\TastyBites\\TastyBites\\SmartResturant\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "SmartResturant\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA1wB8AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T11:20:45.129Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "C:\\Users\\MariamNasser\\Desktop\\.NET Project\\TastyBites\\TastyBites\\SmartResturant\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "SmartResturant\\Views\\Admin\\Dashboard.cshtml",
+              "ToolTip": "C:\\Users\\MariamNasser\\Desktop\\.NET Project\\TastyBites\\TastyBites\\SmartResturant\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeToolTip": "SmartResturant\\Views\\Admin\\Dashboard.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABwAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-30T11:15:57.456Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

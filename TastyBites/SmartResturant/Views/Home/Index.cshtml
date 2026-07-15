@@ -1,0 +1,753 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gourmet Haven - Premium Dining Experience</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        :root {
+            --primary: #e63946;
+            --secondary: #f1faee;
+            --dark: #1d3557;
+            --light: #a8dadc;
+            --accent: #457b9d;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('/images/background/bg3.jpg') center/cover no-repeat;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: var(--dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section {
+            padding: 5rem 0;
+        }
+        
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 في صف واحد */
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .menu-highlight {
+            background-color: var(--secondary);
+        }
+        
+        .menu-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .menu-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .menu-img {
+            height: 200px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+        }
+        
+        .menu-content {
+            padding: 1.5rem;
+        }
+        
+        .menu-content h3 {
+            margin-top: 0;
+            color: var(--dark);
+        }
+        
+        .price {
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .social-icons {
+            margin: 1rem 0;
+        }
+        
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: var(--light);
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Gourmet Haven</h1>
+            <p>Experience culinary excellence with our premium selection of dishes crafted by award-winning chefs</p>
+            <a class="btn" asp-controller="Menu" asp-action="Index">
+                  Explore Our Menu
+            </a>        
+         </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Us</h2>
+            </div>
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Premium Ingredients</h3>
+                    <p>We source only the freshest, highest quality ingredients for all our dishes</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Award-Winning Chefs</h3>
+                    <p>Our culinary team brings years of expertise and creativity to your plate</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Passionate Service</h3>
+                    <p>Dedicated to providing an exceptional dining experience for every guest</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Highlight Section -->
+   <section class="special-dishes py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Our Specialties</h2>
+            <p class="section-subtitle">Discover our chef's selection of signature dishes</p>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Dish 1 -->
+            <div class="col-md-4">
+                <div class="dish-card">
+                    <div class="dish-img-container">
+                        <img src="~/Images/special/s2.jpg" alt="Signature Dish 1" class="dish-img">
+                        <div class="dish-overlay">
+                            <a asp-controller="Order" asp-action="Create" class="btn btn-order">Order Now</a>
+                        </div>
+                    </div>
+                    <div class="dish-body">
+                        <h3 class="dish-title">Signature Dish 1</h3>
+                        <p class="dish-desc">A delightful combination of flavors that will tantalize your taste buds</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="dish-price">$24.99</span>
+                            <span class="dish-rating">
+                                <i class="fas fa-star"></i> 4.9
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dish 2 -->
+            <div class="col-md-4">
+                <div class="dish-card">
+                    <div class="dish-img-container">
+                        <img src="~/Images/special/s1.jpg" alt="Signature Dish 2" class="dish-img">
+                        <div class="dish-overlay">
+                            <a asp-controller="Order" asp-action="Create" class="btn btn-order">Order Now</a>
+                        </div>
+                    </div>
+                    <div class="dish-body">
+                        <h3 class="dish-title">Signature Dish 2</h3>
+                        <p class="dish-desc">An exquisite blend of traditional and modern culinary techniques</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="dish-price">$28.99</span>
+                            <span class="dish-rating">
+                                <i class="fas fa-star"></i> 5.0
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dish 3 -->
+            <div class="col-md-4">
+                <div class="dish-card">
+                    <div class="dish-img-container">
+                        <img src="~/Images/special/s3.jpg" alt="Signature Dish 3" class="dish-img">
+                        <div class="dish-overlay">
+                            <a asp-controller="Order" asp-action="Create" class="btn btn-order">Order Now</a>
+                        </div>
+                    </div>
+                    <div class="dish-body">
+                        <h3 class="dish-title">Signature Dish 3</h3>
+                        <p class="dish-desc">A perfect harmony of textures and flavors for the discerning palate</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="dish-price">$32.99</span>
+                            <span class="dish-rating">
+                                <i class="fas fa-star"></i> 4.8
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-5">
+            <a class="btn btn-primary btn-lg px-4" asp-area="" asp-controller="Menu" asp-action="Index">
+                    <i class="fas fa-book-open me-2"></i> View Full Menu
+            </a>
+        </div>
+    </div>
+</section>
+
+<style>
+    .special-dishes {
+        background-color: #f8f9fa;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #2c3e50;
+        position: relative;
+        display: inline-block;
+        margin-bottom: 1rem;
+    }
+    
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background-color: #e63946;
+    }
+    
+    .section-subtitle {
+        color: #6c757d;
+        font-size: 1.1rem;
+    }
+    
+    .dish-card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        height: 100%;
+    }
+    
+    .dish-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+    
+    .dish-img-container {
+        position: relative;
+        overflow: hidden;
+        height: 250px;
+    }
+    
+    .dish-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+    
+    .dish-card:hover .dish-img {
+        transform: scale(1.05);
+    }
+    
+    .dish-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    .dish-card:hover .dish-overlay {
+        opacity: 1;
+    }
+    
+    .btn-order {
+        background-color: #e63946;
+        color: white;
+        border: none;
+        padding: 10px 25px;
+        border-radius: 30px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+    
+    .btn-order:hover {
+        background-color: #c1121f;
+        transform: translateY(-3px);
+    }
+    
+    .dish-body {
+        padding: 20px;
+    }
+    
+    .dish-title {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: #2c3e50;
+    }
+    
+    .dish-desc {
+        color: #6c757d;
+        margin-bottom: 15px;
+        min-height: 60px;
+    }
+    
+    .dish-price {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #e63946;
+    }
+    
+    .dish-rating {
+        color: #ffc107;
+        font-weight: 600;
+    }
+    
+    .btn-primary {
+        background-color: #e63946;
+        border-color: #e63946;
+        padding: 12px 30px;
+    }
+    
+    .btn-primary:hover {
+        background-color: #c1121f;
+        border-color: #c1121f;
+    }
+</style>
+
+    <!-- Testimonials Section -->
+<section class="testimonials-section py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">What Our Guests Say</h2>
+            <p class="section-subtitle">Hear from our valued customers</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Testimonial 1 -->
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "The best dining experience I've had in years! Every dish was perfection and the service was impeccable."
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="~/Images/testimonials/user1.jpg" alt="Sarah M." class="author-img">
+                        <div>
+                            <h5>Sarah M.</h5>
+                            <p>Regular Customer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Perfect for our anniversary dinner. The ambiance, food, and service were all exceptional. Highly recommend!"
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="~/Images/testimonials/user2.jpg" alt="Michael T." class="author-img">
+                        <div>
+                            <h5>Michael T.</h5>
+                            <p>First-time Visitor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "The flavors were outstanding! We especially loved the chef's special. Will definitely be coming back soon."
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="~/Images/testimonials/user3.jpg" alt="Emily R." class="author-img">
+                        <div>
+                            <h5>Emily R.</h5>
+                            <p>Food Blogger</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .testimonials-section {
+        background-color: #f8f9fa;
+    }
+
+    .testimonial-card {
+        background: white;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        height: 100%;
+        transition: transform 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .testimonial-rating {
+        color: #ffc107;
+        margin-bottom: 15px;
+    }
+
+    .testimonial-text {
+        font-style: italic;
+        color: #555;
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    .testimonial-text::before,
+    .testimonial-text::after {
+        content: '"';
+        font-size: 24px;
+        color: #e63946;
+        opacity: 0.3;
+    }
+
+    .testimonial-author {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .author-img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 15px;
+        border: 2px solid #e63946;
+    }
+
+    .testimonial-author h5 {
+        margin-bottom: 5px;
+        color: #2c3e50;
+    }
+
+    .testimonial-author p {
+        color: #6c757d;
+        font-size: 0.9rem;
+        margin: 0;
+    }
+</style>
+
+    <!-- Footer -->
+<footer class="footer-section bg-dark text-white pt-5 pb-3">
+    <div class="container">
+        <div class="row g-4">
+            <!-- About Column -->
+            <div class="col-lg-4">
+                <div class="footer-brand mb-3">
+                    <h2 class="text-danger">Gourmet Haven</h2>
+                </div>
+                <p>Premium dining experience with the finest ingredients and exceptional service since 2010.</p>
+                <div class="social-icons mt-4">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-tripadvisor"></i></a>
+                </div>
+            </div>
+
+            <!-- Contact Column -->
+            <div class="col-lg-4">
+                <h5 class="footer-heading mb-4">Contact Us</h5>
+                <ul class="footer-contact-list">
+                    <li>
+                        <i class="fas fa-map-marker-alt text-danger me-2"></i>
+                        123 Culinary Street, Foodville
+                    </li>
+                    <li class="mt-2">
+                        <i class="fas fa-phone text-danger me-2"></i>
+                        +1 (555) 123-4567
+                    </li>
+                    <li class="mt-2">
+                        <i class="fas fa-envelope text-danger me-2"></i>
+                        info@gourmethaven.com
+                    </li>
+                    <li class="mt-2">
+                        <i class="fas fa-clock text-danger me-2"></i>
+                        Open Daily: 11:00 AM - 10:00 PM
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Quick Links Column -->
+            <div class="col-lg-4">
+                <h5 class="footer-heading mb-4">Quick Links</h5>
+                <ul class="footer-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/menu">Our Menu</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/gallery">Gallery</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/reservations">Reservations</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="my-4 bg-secondary">
+
+        <div class="row">
+            <div class="col-md-6">
+                <p class="mb-0">&copy; @DateTime.Now.Year Gourmet Haven. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <a href="/privacy" class="text-white">Privacy Policy</a> | 
+                <a href="/terms" class="text-white">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+    .footer-section {
+        background-color: #1a1a1a;
+    }
+
+    .footer-brand h2 {
+        font-weight: 700;
+        font-size: 2rem;
+    }
+
+    .footer-heading {
+        position: relative;
+        padding-bottom: 10px;
+        font-weight: 600;
+    }
+
+    .footer-heading::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 2px;
+        background-color: #e63946;
+    }
+
+    .footer-contact-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-contact-list li {
+        margin-bottom: 10px;
+    }
+
+    .footer-links {
+        list-style: none;
+        padding: 0;
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+    }
+
+    .footer-links li {
+        margin-bottom: 8px;
+    }
+
+    .footer-links a {
+        color: #adb5bd;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+        color: #e63946;
+        text-decoration: none;
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 15px;
+    }
+
+    .social-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: rgba(255,255,255,0.1);
+        color: white;
+        transition: all 0.3s;
+    }
+
+    .social-icon:hover {
+        background-color: #e63946;
+        transform: translateY(-3px);
+    }
+</style>
+</body>
+</html>
