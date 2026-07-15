@@ -17,7 +17,6 @@ TastyBites is a modern and responsive restaurant website developed using **ASP.N
 - HTML5
 - CSS3
 - JavaScript
-- Bootstrap
 - SQL Server
 
 ## 📂 Project Structure
@@ -30,7 +29,7 @@ TastyBites is a modern and responsive restaurant website developed using **ASP.N
 
 ## 📸 Screenshots
 
-*<img width="1366" height="768" alt="Screenshot (190)" src="https://github.com/user-attachments/assets/12937c9b-fa69-4cc8-becb-02d175e4c29e" />*
+*<img width="720" height="341" alt="Picture1" src="https://github.com/user-attachments/assets/9aac0c55-764d-4a31-86d7-1b22c2e1b4de" />*
 
 ## ⚙️ Getting Started
 
